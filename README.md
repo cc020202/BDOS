@@ -21,12 +21,27 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         }
 
-        /* Label 和 Input 格式 */
+        /* 縮小前三行介紹文字 */
+        .container p:first-of-type,
+        .container p:nth-of-type(2),
+        .container p:nth-of-type(3) {
+            font-size: 14px;  /* 可改成 12px 如果想更小 */
+            color: #666;  /* 讓顏色稍微變淡 */
+        }
+
+        /* 調整 info 文字大小與顏色 */
+        .info { 
+            font-size: 12px;  /* 縮小 info 文字 */
+            color: #999;  /* 讓顏色更淺 */
+            margin-top: 3px; 
+        }
+
         label { 
             display: block; 
             margin-top: 12px; 
             font-weight: bold; 
         }
+
         input { 
             width: 100%; 
             padding: 10px; 
@@ -36,7 +51,6 @@
             font-size: 16px; 
         }
 
-        /* 按鈕樣式 */
         button { 
             margin-top: 15px; 
             padding: 12px; 
@@ -54,18 +68,24 @@
             background: #0056b3; 
         }
 
-        /* 響應式調整 */
         @media (max-width: 768px) {
             .container { 
                 max-width: 95%; 
                 padding: 15px; 
             }
-            
+
             input, button { 
                 font-size: 14px; 
                 padding: 8px; 
             }
         }
+        #result { 
+            font-size: 24px;  /* 你可以改成 22px、24px 來更大 */
+            font-weight: bold; /* 讓文字加粗 */
+            color: #333; /* 讓顏色更明顯 */
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
