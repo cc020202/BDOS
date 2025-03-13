@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交易計算器</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 2px; }
+        body { font-family: Arial, sans-serif; margin: 12px; }
         .container { max-width: 500px; margin: auto; }
         label { display: block; margin-top: 12px; }
         input { width: 100%; padding: 8px; margin-top: 5px; }
@@ -77,7 +77,7 @@
             }
 
             let nominalValue = riskAmount / stopLossRatio;
-            document.getElementById("result").innerText = "名義價值: " + nominalValue.toFixed(2) + " USD";
+            document.getElementById("result").innerText = "名義價值: " + nominalValue.toFixed(2) + "USDT";
         }
     </script>
 </body>
