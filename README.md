@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交易計算器</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 6px; }
+        body { font-family: Arial, sans-serif; margin: 2px; }
         .container { max-width: 500px; margin: auto; }
         label { display: block; margin-top: 12px; }
         input { width: 100%; padding: 8px; margin-top: 5px; }
@@ -25,7 +25,7 @@
         <input type="number" id="risk_amount">
         <p class="info">這筆交易你最多願意承受的虧損金額。</p>
         
-        <label>總資金（USDT）：</label>
+        <label>總本金（USDT）：</label>
         <input type="number" id="capital">
         <p class="info">你在市場中的『總投資金』（非單筆交易的本金），此欄需搭配「總本金虧損百分比」。</p>
         
