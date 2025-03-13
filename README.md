@@ -27,8 +27,7 @@
         
         <label>總資金（USDT）：</label>
         <input type="number" id="capital">
-        <p class="info">你在市場中的 總投資金額（非單筆交易的本金）。</p>
-	<p class="info">填寫此欄需搭配「總本金虧損百分比」。</p>
+        <p class="info">你在市場中的『總投資金』（非單筆交易的本金），此欄需搭配「總本金虧損百分比」。</p>
         
         <label>總本金虧損百分比（%）：</label>
         <input type="number" id="risk_percent" placeholder="1" value="1">
