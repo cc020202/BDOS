@@ -1,17 +1,71 @@
-
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交易計算器</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 12px; }
-        .container { max-width: 500px; margin: auto; }
-        label { display: block; margin-top: 12px; }
-        input { width: 100%; padding: 8px; margin-top: 5px; }
-        button { margin-top: 15px; padding: 10px; width: 100%; background: blue; color: white; border: none; }
-        p { line-height: 1.4; margin: 5px 0; } /* 調整行高與間距 */
-        .info { font-size: 14px; color: gray; margin-top: 3px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 12px; 
+            padding: 0; 
+            background-color: #f8f9fa;
+        }
+
+        .container { 
+            max-width: 90%; 
+            width: 500px; 
+            margin: auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Label 和 Input 格式 */
+        label { 
+            display: block; 
+            margin-top: 12px; 
+            font-weight: bold; 
+        }
+        input { 
+            width: 100%; 
+            padding: 10px; 
+            margin-top: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            font-size: 16px; 
+        }
+
+        /* 按鈕樣式 */
+        button { 
+            margin-top: 15px; 
+            padding: 12px; 
+            width: 100%; 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            font-size: 18px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            transition: background 0.3s;
+        }
+
+        button:hover { 
+            background: #0056b3; 
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            .container { 
+                max-width: 95%; 
+                padding: 15px; 
+            }
+            
+            input, button { 
+                font-size: 14px; 
+                padding: 8px; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -35,7 +89,7 @@
         
         <label>開倉價格：</label>
         <input type="number" id="entry_price">
-	<p class="info">你計畫買入（做多）或賣出（做空）的價格。</p>        
+        <p class="info">你計畫買入（做多）或賣出（做空）的價格。</p>        
 
         <label>止損價格：</label>
         <input type="number" id="stop_loss_price">
