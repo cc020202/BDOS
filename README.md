@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交易計算器</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 12px; }
+        body { font-family: Arial, sans-serif; margin: 10px; }
         .container { max-width: 500px; margin: auto; }
-        label { display: block; margin-top: 10px; }
+        label { display: block; margin-top: 12px; }
         input { width: 100%; padding: 8px; margin-top: 5px; }
         button { margin-top: 15px; padding: 10px; width: 100%; background: blue; color: white; border: none; }
         p { line-height: 1.4; margin: 5px 0; } /* 調整行高與間距 */
@@ -17,9 +17,9 @@
 <body>
     <div class="container">
         <h2>風險控制倉位計算器</h2>
-        <p>🔹請選填寫「預期損失金額」或「總本金×總本金虧損百分比」（二擇一）。</p>
-        <p>🔹這是一個倉位計算器可幫助使用者根據可承受的風險，計算適當的倉位大小。</p>
-        <p>🔹適用於新手與有經驗的交易者，確保每筆交易風險可控。</p>
+        <p>🔹請選填「預期損失金額」或「總本金×總本金虧損百分比」（二擇一）</p>
+        <p>🔹這是一個倉位計算器可幫助使用者根據可承受的風險，計算適當的倉位大小</p>
+        <p>🔹適用於新手與有經驗的交易者，確保每筆交易風險可控</p>
        
         <label>預期損失金額（USDT）：</label>
         <input type="number" id="risk_amount">
