@@ -1,43 +1,49 @@
-<html lang="zh-TW">
+
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交易計算器</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 500px; margin: auto; }
+        label { display: block; margin-top: 10px; }
+        input { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px; width: 100%; background: blue; color: white; border: none; }
+        p { line-height: 1.4; margin: 5px 0; } /* 調整行高與間距 */
+        .info { font-size: 14px; color: gray; margin-top: 3px; }
+    </style>
 </head>
-<body class="bg-gray-100 p-6">
-    <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold mb-4">BDOS風險控制交易計算器</h2>
-        <p class="text-sm text-gray-600 mb-4">請填入「預期損失金額」或「本金 × 預期虧損百分比」（二擇一）</p>
+<body>
+    <div class="container">
+        <h2>風險控制倉位計算器</h2>
+        <p>🔹請選擇填寫「預期損失金額」或「總本金×總本金虧損百分比」（二擇一）。</p>
+        <p>🔹這是一個倉位計算器可幫助使用者根據可承受的風險，計算適當的倉位大小。</p>
+        <p>🔹適用於新手與有經驗的交易者，確保每筆交易風險可控。</p>
+       
+        <label>預期損失金額（USDT）：</label>
+        <input type="number" id="risk_amount">
+        <p class="info">這筆交易你最多願意承受的虧損金額。</p>
+        
+        <label>總資金（USDT）：</label>
+        <input type="number" id="capital">
+        <p class="info">你在市場中的 總投資金額（非單筆交易的本金）。</p>
+        
+        <label>總本金虧損百分比（%）：</label>
+        <input type="number" id="risk_percent" placeholder="1" value="1">
+        <p class="info">單筆交易最多虧損總資金的百分比，未填寫則預設 1%。</p>
+        
+        <label>開倉價格：</label>
+        <input type="number" id="entry_price">
+	<p class="info">你計畫買入（做多）或賣出（做空）的價格。</p>        
 
-        <label class="block mb-3">預期損失金額（USDT，可留空）：
-            <input type="number" id="risk_amount" class="w-full p-2 border rounded">
-        </label>
-
-        <div class="grid grid-cols-2 gap-4">
-            <label class="block">本金（USDT，可留空）：
-                <input type="number" id="capital" class="w-full p-2 border rounded">
-            </label>
-            <label class="block">預期虧損百分比（%，可留空）：
-                <input type="number" id="risk_percent" class="w-full p-2 border rounded">
-            </label>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mt-3">
-            <label class="block">開倉價格：
-                <input type="number" id="entry_price" class="w-full p-2 border rounded">
-            </label>
-            <label class="block">止損價格：
-                <input type="number" id="stop_loss_price" class="w-full p-2 border rounded">
-            </label>
-        </div>
-
-        <button onclick="calculate()" class="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
-            計算
-        </button>
-
-        <h3 class="text-lg font-semibold mt-4">計算結果：</h3>
-        <p id="result" class="text-gray-700 mt-2"></p>
+        <label>止損價格：</label>
+        <input type="number" id="stop_loss_price">
+        <p class="info">交易價格不利時，此單要出場的價格。</p>
+        
+        <button onclick="calculate()">計算</button>
+        <h3>計算結果：</h3>
+        <p id="result"></p>
     </div>
 
     <script>
@@ -74,6 +80,5 @@
             document.getElementById("result").innerText = "名義價值: " + nominalValue.toFixed(2) + " USD";
         }
     </script>
-
 </body>
 </html>
