@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交易計算器</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 10px; }
+        body { font-family: Arial, sans-serif; margin: 8px; }
         .container { max-width: 500px; margin: auto; }
         label { display: block; margin-top: 12px; }
         input { width: 100%; padding: 8px; margin-top: 5px; }
