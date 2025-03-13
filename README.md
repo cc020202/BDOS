@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <h2>風險控制倉位計算器</h2>
-        <p>🔹請選擇填寫「預期損失金額」或「總本金×總本金虧損百分比」（二擇一）。</p>
+        <p>🔹請選填寫「預期損失金額」或「總本金×總本金虧損百分比」（二擇一）。</p>
         <p>🔹這是一個倉位計算器可幫助使用者根據可承受的風險，計算適當的倉位大小。</p>
         <p>🔹適用於新手與有經驗的交易者，確保每筆交易風險可控。</p>
        
@@ -28,6 +28,7 @@
         <label>總資金（USDT）：</label>
         <input type="number" id="capital">
         <p class="info">你在市場中的 總投資金額（非單筆交易的本金）。</p>
+	<p class="info">填寫此欄需搭配「總本金虧損百分比」。</p>
         
         <label>總本金虧損百分比（%）：</label>
         <input type="number" id="risk_percent" placeholder="1" value="1">
